@@ -1,0 +1,21 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block content %}
+<div id="container2">
+	<div class="form">
+		<h3>{% trans 'LOGIN' %}</h3>
+		<form method="post" action="">
+	    	{% csrf_token %}
+			{% for field in form %}
+				<div class="pa">{{field.label}}<p>{{field}}<p></div>
+			{% endfor %}
+			<input type="submit" class="btn btn-primary" value="Send" />
+			<a href="/account/password/reset/" style="color:#008080">{% trans 'Forgot my password?' %}</a>
+	</div>
+
+<div class="push2"></div>
+</div>
+<div class="footer">
+    {% include "footer.html" %}
+</div>
+{% endblock %}

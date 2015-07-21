@@ -1,0 +1,55 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block content %}
+<div id="container2">
+	<div class="cnt">                
+        <table>
+			<tbody>
+			      <tr>
+			       <tk></tk>
+			        <tk>Etkinlik Tarihi</tk>
+			        <tk>{% trans 'Time' %}</tk>
+			        <tk>{% trans 'Event Name' %}</tk>
+			        <tk>{% trans 'Event Type' %}</tk>
+			        <tk>{% trans 'Event User' %}</tk>
+			     </tr>
+			    </tbody>
+			</table>   
+			
+			<table class="table">
+			    <tbody>
+			    {% for event in events %}
+			        <tr class="success">
+			        <td>
+			            <a style="outline:none;color:#008080;" href="{% url 'update_event' event.id %}">Guncelle</a>
+			        </td>
+			        <td>
+			            {{event.date}}
+			        </td>
+			        <td>
+			            {{event.get_time_display}}
+			        </td>
+			        <td>
+			            {{event.title}}
+			        </td>
+			         <td>
+			            {{event.get_event_type_display}}
+			        </td>
+			        <td>
+			            {{event.user}}
+			        </td>
+			        
+			        </tr>
+			        {% endfor %}
+			        
+			    </tbody>
+			</table>
+	</div>
+
+
+<div class="push"></div>
+</div>
+<div class="footer">
+    {% include "footer.html" %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base2.html" %}
+{% load i18n %}
+{% block content %}
+
+<div id="container2">
+	<div class="form">
+	{% if messages %}
+		{% for message in messages %}
+			<font size="5" color="#b22222">{{message}}</font>
+		{% endfor %}
+	{% endif %}
+	<h3>{% blocktrans %}Sayın {{user}} Lütfen Etkinlik Bilgilerinizi Giriniz {% endblocktrans %}</h3>
+	<form enctype="multipart/form-data" method="post" action="">
+		{% csrf_token %}
+		{% for field in form %}
+			<div class="pa">{{field.help_text}}<p>{{field}}<p></div>
+			{% endfor %}
+		<input type="submit" class="btn btn-primary" value={% trans "Send" %}>
+	</form>
+	</div>
+
+<div class="push"></div>
+</div>
+<div class="footer">
+    {% include "footer.html" %}
+</div>
+{% endblock %}

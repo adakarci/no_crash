@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-17 21:07+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: no_crash/settings.py:41
+msgid "English"
+msgstr "İngilizce"
+
+#: no_crash/settings.py:42
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: no_crash/templates/contact.html:9
+msgid ""
+"Please contact admin to create beautiful timelines. Thanks for your "
+"attention to application."
+msgstr ""
+"Zaman - Etkinlik takvimi oluşturmak için lütfen admin ile iletişime geçiniz."
+"Uygulamaya ilgi gösterdiğiniz için teşekkür ederim."
+
+#: no_crash/templates/detail_day.html:11
+msgid "Time"
+msgstr "Zaman"
+
+#: no_crash/templates/detail_day.html:12
+msgid "Event Name"
+msgstr "Etkinlik Adı"
+
+#: no_crash/templates/detail_day.html:13
+msgid "Event Type"
+msgstr "Etkinlik Türü"
+
+#: no_crash/templates/detail_day.html:14
+msgid "Event User"
+msgstr "Etkinliği Oluşturan Kişi"
+
+#: no_crash/templates/event_form.html:7
+#, python-format
+msgid "Sayın %(user)s Lütfen Etkinlik Bilgilerinizi Giriniz "
+msgstr "Sayın %(user)s Lütfen Etkinlik Bilgilerinizi Giriniz "
+
+#: no_crash/templates/event_form.html:15
+#: no_crash/templates/registration/password_reset_form.html:10
+msgid "Send"
+msgstr "Gönder"
+
+#: no_crash/templates/footer.html:5
+msgid "About Us"
+msgstr "Hakkımızda"
+
+#: no_crash/templates/footer.html:6
+msgid "Please Contact Us"
+msgstr "Bizimle İletişime Geçiniz"
+
+#: no_crash/templates/in.html:6 no_crash/templates/index.html:12
+#: no_crash/templates/month.html:12
+msgid "All Works"
+msgstr "Bütün Etkinlikler"
+
+#: no_crash/templates/in.html:11 no_crash/templates/index.html:71
+#: no_crash/templates/month.html:56
+msgid "Exams"
+msgstr "Sınavlar"
+
+#: no_crash/templates/in.html:14 schedule/models.py:23
+msgid "Festival"
+msgstr "Kutlamalar"
+
+#: no_crash/templates/in.html:17 no_crash/templates/index.html:161
+#: no_crash/templates/month.html:144
+msgid "Lab Plan"
+msgstr "Laboratuvar Planı"
+
+#: no_crash/templates/in.html:20
+msgid "Logout"
+msgstr "Çıkış"
+
+#: no_crash/templates/index.html:6 no_crash/templates/index.html.py:65
+#: no_crash/templates/index.html:111 no_crash/templates/index.html.py:155
+#: no_crash/templates/month.html:6 no_crash/templates/month.html.py:50
+#: no_crash/templates/month.html:94 no_crash/templates/month.html.py:138
+msgid "Prev"
+msgstr "Önce"
+
+#: no_crash/templates/index.html:7 no_crash/templates/index.html.py:66
+#: no_crash/templates/index.html:112 no_crash/templates/index.html.py:156
+#: no_crash/templates/month.html:7 no_crash/templates/month.html.py:51
+#: no_crash/templates/month.html:95 no_crash/templates/month.html.py:139
+msgid "Next"
+msgstr "Sonra"
+
+#: no_crash/templates/index.html:20 no_crash/templates/index.html.py:78
+#: no_crash/templates/index.html:125 no_crash/templates/index.html.py:169
+#: no_crash/templates/month.html:20 no_crash/templates/month.html.py:64
+#: no_crash/templates/month.html:108 no_crash/templates/month.html.py:152
+msgid "Monday"
+msgstr "Pazartesi"
+
+#: no_crash/templates/index.html:21 no_crash/templates/index.html.py:79
+#: no_crash/templates/index.html:126 no_crash/templates/index.html.py:170
+#: no_crash/templates/month.html:21 no_crash/templates/month.html.py:65
+#: no_crash/templates/month.html:109 no_crash/templates/month.html.py:153
+msgid "Tuesday"
+msgstr "Salı"
+
+#: no_crash/templates/index.html:22 no_crash/templates/index.html.py:80
+#: no_crash/templates/index.html:127 no_crash/templates/index.html.py:171
+#: no_crash/templates/month.html:22 no_crash/templates/month.html.py:66
+#: no_crash/templates/month.html:110 no_crash/templates/month.html.py:154
+msgid "Wend"
+msgstr "Çarşamba"
+
+#: no_crash/templates/index.html:23 no_crash/templates/index.html.py:81
+#: no_crash/templates/index.html:128 no_crash/templates/index.html.py:172
+#: no_crash/templates/month.html:23 no_crash/templates/month.html.py:67
+#: no_crash/templates/month.html:111 no_crash/templates/month.html.py:155
+msgid "Thursday"
+msgstr "Perşembe"
+
+#: no_crash/templates/index.html:24 no_crash/templates/index.html.py:82
+#: no_crash/templates/index.html:129 no_crash/templates/index.html.py:173
+#: no_crash/templates/month.html:24 no_crash/templates/month.html.py:68
+#: no_crash/templates/month.html:112 no_crash/templates/month.html.py:156
+msgid "Friday"
+msgstr "Cuma"
+
+#: no_crash/templates/index.html:25 no_crash/templates/index.html.py:83
+#: no_crash/templates/index.html:130 no_crash/templates/index.html.py:174
+#: no_crash/templates/month.html:25 no_crash/templates/month.html.py:69
+#: no_crash/templates/month.html:113 no_crash/templates/month.html.py:157
+msgid "Saturday"
+msgstr "Cumartesi"
+
+#: no_crash/templates/index.html:26 no_crash/templates/index.html.py:84
+#: no_crash/templates/index.html:131 no_crash/templates/index.html.py:175
+#: no_crash/templates/month.html:26 no_crash/templates/month.html.py:70
+#: no_crash/templates/month.html:114 no_crash/templates/month.html.py:158
+msgid "Sunday"
+msgstr "Pazar"
+
+#: no_crash/templates/index.html:52
+msgid "detail"
+msgstr "günün detayı"
+
+#: no_crash/templates/index.html:117 no_crash/templates/month.html:100
+#: schedule/models.py:22
+msgid "Ceremony"
+msgstr "Tören"
+
+#: no_crash/templates/index2.html:10
+msgid "Time is not your enemy..Time must be your friend!"
+msgstr "Zaman düşmanınız değildir. Sadece doğru planlanmalıdır!"
+
+#: no_crash/templates/index2.html:14
+msgid "Share your plan with  co-workers!"
+msgstr "Etkinliklerinizi iş arkadaşlarınız ile paylaşın!"
+
+#: no_crash/templates/index2.html:15
+msgid "Sign up now"
+msgstr "Kayıt Ol"
+
+#: no_crash/templates/index2.html:21
+msgid ""
+"No-craSh is web-based software for creating useful timelines that you can "
+"share with your co-workers on internet."
+msgstr ""
+"NocraSh Zaman - Etkinlik Takvimi Oluşturabilmeniz ve İş Arkadaşlarınızla "
+"İnternet Üzerinden Paylaşım Yapabilmeniz İçin Geliştirilmiş Bir Yazılımdır"
+
+#: no_crash/templates/index2.html:29
+msgid "Why I created No-craSh ?"
+msgstr "NocraSh gibi bir uygulamaya neden gereksinim duydum?"
+
+
+msgid ""
+"When we want to create some event, exam or anything at school, nobody knows "
+"until we tell each of them. <p>We use whatsapp group to inform but it is not "
+"enough. <p>So we look into some apps but we didnt like them. So we want to "
+"build a system that belongs us."
+msgstr ""
+"Okulda bir etkinlik oluşturmak istediğimiz zaman bunu herkese bildirmek zor "
+"oluyordu. Okulda kullandığımız bir watsapp grubumuz var ancak toplu etkinlik "
+"tarihlerinde örneğin sınavlar gibi oldukça zorlanıyorduk. Bunu çözmek için "
+"bir kaç uygulama araştırmama rağmen kendimize ait bir sistem kurmak istedim. Bunun "
+"sonucunda NocraSh ortaya çıktı."
+
+#: no_crash/templates/index2.html:35
+msgid "Who can use No-craSh?"
+msgstr "NocraSh uygulamasını kimler kullanabilir?"
+
+#: no_crash/templates/index2.html:38
+msgid ""
+"First of all I created it for my school but after some thinking I realized "
+"that any school can use it if they want."
+msgstr ""
+"Açıkçası bu uygulamayı sadece kendi okulum için oluşturduğumu düşünüyordum. Ancak "
+"biraz düşününce diğer okulların da istekleri doğrultusunda "
+"kullanabileceklerini farkettim."
+
+#: no_crash/templates/index2.html:41
+msgid "Why use No-craSh?"
+msgstr "NocraSh'ı niçin kullanmalıyım?"
+
+#: no_crash/templates/index2.html:44
+msgid ""
+"Time is important and it must be planned. If you cant communicate enough at "
+"your school about events you can use No-craSh."
+msgstr ""
+"Zaman çok önemli bir unsur ve planlanmalıdır. İş yerinde etkinlikler hakkında "
+"iletişimde kopukluk yaşanıyorsa NocraSh'ı kullanmayı deneyebilirsiniz."
+
+#: no_crash/templates/index2.html:47
+msgid "How can I sign-up?"
+msgstr "Nasıl kayıt olabilirim?"
+
+#: no_crash/templates/index2.html:50
+msgid "You can contact admin from register menu. "
+msgstr "Admin ile iletişime geçerek kendinize ait bir yapı oluşturabilirsiniz."
+
+#: no_crash/templates/index2.html:52
+msgid "Can we create our menu?"
+msgstr "Kendi menülerimizi oluşturabilir miyiz?"
+
+#: no_crash/templates/index2.html:55
+msgid "Yes! You can create menus for what you need."
+msgstr ""
+"Evet! İhtiyaçlarınıza karşılık verecek şekilde sadece menüleri oluşturmakla "
+"kalmayarak kendi yapınızı kurabilirsiniz."
+
+#: no_crash/templates/login.html:6
+msgid "LOGIN"
+msgstr "Giriş"
+
+#: no_crash/templates/login.html:16
+msgid "Forgot my password?"
+msgstr "Şifremi unuttum?"
+
+#: no_crash/templates/out.html:11
+msgid "Login"
+msgstr "Giriş"
+
+#: no_crash/templates/out.html:14
+msgid "Register"
+msgstr "Kayıt Ol"
+
+#: no_crash/templates/out.html:17
+msgid "How it works"
+msgstr "Nasıl Kullanabilirim"
+
+#: no_crash/templates/registration/password_reset_complete.html:6
+msgid "Your password has been reset, you can "
+msgstr ""
+
+#: no_crash/templates/registration/password_reset_complete.html:6
+msgid "log in"
+msgstr "giriş yap"
+
+#: no_crash/templates/registration/password_reset_confirm.html:2
+#: no_crash/templates/registration/password_reset_confirm.html:7
+msgid "Reset Password"
+msgstr "Şifremi Değiştir"
+
+#: no_crash/templates/registration/password_reset_confirm.html:8
+msgid "Enter your new password below to reset your password"
+msgstr "Yeni şifrenizi giriniz"
+
+#: no_crash/templates/registration/password_reset_confirm.html:12
+msgid "Submit"
+msgstr "Gönder"
+
+#: no_crash/templates/registration/password_reset_done.html:8
+msgid ""
+"We have sent you an email with a link to reset your password. Please check "
+"your email and click the link to continue. "
+msgstr ""
+"Şifrenizi sıfırlamanız için size mail gönderdik. Lütfen kontrol ediniz."
+
+#: no_crash/templates/registration/password_reset_email.html:1
+#, python-format
+msgid ""
+"Greetings %(user)s,\n"
+"You are requested that your password be reset on the %(site_name)s site."
+msgstr ""
+"Sayın %(user)s, \n"
+"Şifrenizi sıfırlamak için %(site_name)s üzerinden istekte bulundunuz."
+
+#: no_crash/templates/registration/password_reset_email.html:3
+msgid ""
+"Click the following link, or copy and paste it into your web browser to "
+"reset your password:"
+msgstr ""
+
+#: no_crash/templates/registration/password_reset_email.html:5
+#, python-format
+msgid "Your username, in case you've forgotten: %(username)s"
+msgstr "Kullanıcı adınızı unutmanız durumunda: %(username)s"
+
+#: no_crash/templates/registration/password_reset_email.html:6
+#, python-format
+msgid "%(site_name)s Management"
+msgstr ""
+
+#: no_crash/templates/registration/password_reset_form.html:2
+msgid "Reset password"
+msgstr "Şifremi Değiştir"
+
+#: no_crash/templates/registration/password_reset_form.html:6
+msgid ""
+" Enter your email adress in our system, than we will send you instrucions."
+msgstr ""
+"Şifrenizi değiştirmek için size mail göndereceğiz, bu işlem için sistemde "
+"kayıtlı olan email adresini giriniz."
+
+#: no_crash/templates/update_event.html:12
+#, python-format
+msgid "Dear %(user)s You can update your event info. "
+msgstr "Sayın %(user)s etkinlik bilgilerinizi güncelleyebilirsiniz."
+
+#: no_crash/templates/update_event.html:24
+msgid ""
+"If you want to change date of this event, you must delete it and create a "
+"new one."
+msgstr ""
+"Etkinlik tarihi değiştirmek için bu etkinliği silerek "
+"yenisinioluşturmalısınız."
+
+#: no_crash/templates/update_event.html:25
+msgid "Delete event"
+msgstr "Etkinlik Sil"
+
+#: schedule/forms.py:7
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: schedule/forms.py:8
+msgid "password"
+msgstr "Şifre"
+
+#: schedule/forms.py:16
+msgid "Username or password is wrong"
+msgstr "Kullanıcı adı ya da parola yanlış"
+
+#: schedule/models.py:20
+msgid "Examination"
+msgstr "Sınav"
+
+#: schedule/models.py:21
+msgid "Lab Lesson"
+msgstr "Laboratuvar Dersi"
+
+#: schedule/models.py:25
+msgid "1.LESSON(08.00)"
+msgstr "1.Ders(08.00)"
+
+#: schedule/models.py:26
+msgid "2.LESSON(09.00)"
+msgstr "2.Ders(09.00)"
+
+#: schedule/models.py:27
+msgid "3.LESSON(10.00)"
+msgstr "3.Ders(10.00)"
+
+#: schedule/models.py:28
+msgid "4.LESSON(11.00)"
+msgstr "4.Ders(11.00)"
+
+#: schedule/models.py:29
+msgid "5.LESSON(12.00)"
+msgstr "5.Ders(12.00)"
+
+#: schedule/models.py:30
+msgid "6.LESSON(13.00)"
+msgstr "6.Ders(13.00)"
+
+#: schedule/models.py:31
+msgid "1.LESSON(14.00)"
+msgstr "1.Ders(14.00)"
+
+#: schedule/models.py:32
+msgid "2.LESSON(15.00)"
+msgstr "2.Ders(15.00)"
+
+#: schedule/models.py:33
+msgid "3.LESSON(16.00)"
+msgstr "3.LESSON(16.00)"
+
+#: schedule/models.py:39
+msgid "Choose your event type"
+msgstr "Etkinlik Türünü Seçin"
+
+#: schedule/models.py:41
+msgid "Enter a name for your event"
+msgstr "Etkinliğiniz için bir isim girin"
+
+#: schedule/models.py:42
+msgid "Not necessary, if you want to explain your event you can use here."
+msgstr ""
+"Zorunlu değil, eğer etkinliğinizi açıklamak isterseniz kullanabilirsiniz"
+
+#: schedule/models.py:46
+msgid "Choose a time for your event"
+msgstr "Etkinliğiniz için saat seçiniz"
+
+#: schedule/views.py:14
+msgid "January"
+msgstr "Ocak"
+
+#: schedule/views.py:14
+msgid "February"
+msgstr "Şubat"
+
+#: schedule/views.py:14
+msgid "March"
+msgstr "Mart"
+
+#: schedule/views.py:14
+msgid "April"
+msgstr "Nisan"
+
+#: schedule/views.py:14
+msgid "May"
+msgstr "Mayıs"
+
+#: schedule/views.py:14
+msgid "June"
+msgstr "Haziran"
+
+#: schedule/views.py:14
+msgid "July"
+msgstr "Temmuz"
+
+#: schedule/views.py:14
+msgid "August"
+msgstr "Ağustos"
+
+#: schedule/views.py:14
+msgid "September"
+msgstr "Eylül"
+
+#: schedule/views.py:14
+msgid "October"
+msgstr "Ekim"
+
+#: schedule/views.py:14
+msgid "November"
+msgstr "Kasım"
+
+#: schedule/views.py:14
+msgid "December"
+msgstr "Aralık"
+
+#: schedule/views.py:116 schedule/views.py:134
+msgid "Please fill in the blanks"
+msgstr "Lütfen boşlukları doldurunuz"
