@@ -1,55 +1,42 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 {% block content %}
 <div id="container2">
-	<div class="cnt">                
-        <table>
-			<tbody>
-			      <tr>
-			       <tk></tk>
-			        <tk>Etkinlik Tarihi</tk>
-			        <tk>{% trans 'Time' %}</tk>
-			        <tk>{% trans 'Event Name' %}</tk>
-			        <tk>{% trans 'Event Type' %}</tk>
-			        <tk>{% trans 'Event User' %}</tk>
-			     </tr>
-			    </tbody>
-			</table>   
-			
-			<table class="table">
-			    <tbody>
-			    {% for event in events %}
-			        <tr class="success">
-			        <td>
-			            <a style="outline:none;color:#008080;" href="{% url 'update_event' event.id %}">Guncelle</a>
-			        </td>
-			        <td>
-			            {{event.date}}
-			        </td>
-			        <td>
-			            {{event.get_time_display}}
-			        </td>
-			        <td>
-			            {{event.title}}
-			        </td>
-			         <td>
-			            {{event.get_event_type_display}}
-			        </td>
-			        <td>
-			            {{event.user}}
-			        </td>
-			        
-			        </tr>
-			        {% endfor %}
-			        
-			    </tbody>
-			</table>
+	{% if events %}
+	<div id="menumy">            
+		<tl></tl>
+		<tl>{% trans 'Event Time' %}</tl>
+		<tl>{% trans 'Time' %}</tl>
+		<tl>{% trans 'Event Name' %}</tl>
+		<tl>{% trans 'Event Type' %}</tl>
+		<tl>{% trans 'Event User' %}</tl>
 	</div>
-
-
-<div class="push"></div>
+	<div id="contentmy">		    
+		{% for event in events %}
+			<tl class="general">
+			    <a style="outline:none;color:#008080;" href="{% url 'update_event' event.id %}">Guncelle</a>
+			</tl>
+			<tl class="general">
+			    {{event.date}}
+			</tl>
+			<tl class="general">
+			    {{event.get_time_display}}
+			</tl>
+			<tl class="general">
+			    {{event.title}}
+			</tl>
+			<tl class="general">
+			    {{event.get_event_type_display}}
+			</tl>
+			<tl class="general">
+			    {{event.user}}
+			</tl>
+		{% endfor %}
+	</div>
+{% else %}
+<div class="not"> 
+{% blocktrans %} You didnt create any event, so there is nothing to display here. {% endblocktrans %}
 </div>
-<div class="footer">
-    {% include "footer.html" %}
+{% endif %}
 </div>
 {% endblock %}

@@ -6,7 +6,7 @@ from django.utils.translation import ugettext as _
 EXAMINATION = 0
 LABLESSON = 1
 CEREMONY = 2
-FESTIVAL = 3
+
 
 LESSON1 = 1
 LESSON2 = 2
@@ -19,9 +19,7 @@ LESSON8 = 8
 LESSON9 = 9
 EVENT_CHOICES = ((EXAMINATION, _('Examination')),
                  (LABLESSON, _('Lab Lesson')),
-                 (CEREMONY, _('Ceremony')),
-                 (FESTIVAL, _('Festival')))
-
+                 (CEREMONY, _('Ceremony')))
 TIME_CHOICES = ((LESSON1, _('1.LESSON(08.00)')),
                 (LESSON2, _('2.LESSON(09.00)')),
                 (LESSON3, _('3.LESSON(10.00)')),
@@ -54,7 +52,6 @@ class Event(models.Model):
         default=0,
         help_text=_("Choose a time for your event"),
         choices=TIME_CHOICES)
-    decline = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         ordering = ('time', )

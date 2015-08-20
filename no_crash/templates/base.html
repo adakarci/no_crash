@@ -1,5 +1,77 @@
 {% load i18n %}
-{% include 'head.html' %}
-{% include 'in.html' %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% trans 'Create event on calendar and share with your co-workers' %}">
+    <meta name="keywords" content="takvim, okul, etkinlik" />
+    <title>{% trans 'No-craSh' %}</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="{{ STATIC_URL }}css/custom.less" />
+    <script type="text/javascript" src="{{ STATIC_URL }}css/less.js"></script>
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body onload="UR_Start()">
+    {% if user.is_authenticated %}
+	<header id="back">
+	<div class="openmenu">{% trans 'Menu' %}</div>
+	<ul>
+	<li><img src="{{STATIC_URL}}img/kum.png" /></li>
+    <li><a href="{% url 'index' %}">{% trans 'NocraSh' %}</a></li>
+    <li><a href="{% url 'index'  %}">{% trans 'All Works' %}</a></li>
+    <li><a href="{% url 'detail_events' 'exams' %}">{% trans 'Exams' %}</a></li>
+    <li><a href="{% url 'detail_events' 'ceremony' %}">{% trans 'Festival' %}</a></li>
+    <li><a href="{% url 'detail_events' 'lab' %}">{% trans 'Lab Plan' %}</a></li>
+    <li><a href="{% url 'my_event' %}">{{ request.user }}({% trans 'My Events' %})</a></li>
+    <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+    </ul>
+    </header>
+    {% else %}
+    <header>
+    <div class="openmenu">{% trans 'Menu' %}</div>
+    <ul>
+    <li><img src="{{STATIC_URL}}img/kum.png" /></li>
+    <li><a href="{% url 'index' %}">{% trans 'NocraSh' %}</a></li>
+    <div class="mrd">
+    <li class="fr"><a href="{% url 'login' %}">{% trans 'Login' %}</a></li>
+    <li class="fr"><a href="{% url 'contact' %}">{% trans 'Register' %}</a></li>
+    </div>
+    </ul>
+   </header> 
+    {% endif %}
+    
+    
+    
+
+<script type="text/javascript">
+function UR_Start()
+{
+    UR_Nu = new Date;
+    UR_Indhold = showFilled(UR_Nu.getHours()) + ":" + showFilled(UR_Nu.getMinutes()) + ":" + showFilled(UR_Nu.getSeconds());
+    document.getElementById("inright").innerHTML = UR_Indhold;
+    setTimeout("UR_Start()",1000);
+}
+function showFilled(Value)
+{
+    return (Value > 9) ? "" + Value : "0" + Value;
+}
+</script>
+<script>
+$(function() {
+$('.openmenu').on('click', function(e) {
+e.preventDefault();
+$(this).next('ul').slideToggle();
+});
+});
+
+</script>
+
 {% block content %}
 {% endblock %}
+
+<div class="footer">
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

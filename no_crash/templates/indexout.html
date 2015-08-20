@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div id="container2">
+<div id="part1">
+      <div id="inleft">
+      {% blocktrans %}Time is not your enemy..Time must be your friend!{% endblocktrans %}
+      </div>
+      <div id="inright"></div>
+
+    <div id="intext">{% blocktrans %}Share your plan with  co-workers!{% endblocktrans %}</div>
+    <div class="signbut"><a href="{% url 'contact' %}">{% trans 'Sign up now' %}</a></div>
+</div>
+
+<div id="part2">
+        <div class="section-up mgts">{% trans 'NocraSh' %}</div>
+    	  <div class="text">{% blocktrans %}No-craSh is web-based software for creating useful timelines that you can share with your co-workers on internet.{% endblocktrans %}
+        <p>@2015
+        </div>
+</div>
+
+<div id="part3">
+       <div class="head bgt" >
+          {% blocktrans %}Why I created No-craSh ?{% endblocktrans %}
+       </div>
+       <div class="text mdt">
+       {% blocktrans %}When we want to create some event, exam or anything at school, nobody knows until we tell each of them. We use WhatsApp group to inform but it is not enough. So we look into some apps but we didnt like them. So we want to build a system that belongs us.{% endblocktrans %}
+       </div>
+       <div class="head mdt">
+       {% blocktrans %}Who can use No-craSh?{% endblocktrans %}
+       </div>
+       <div class="text">
+       {% blocktrans %}First of all I created it for my school but after some thinking I realized that any school can use it if they want.{% endblocktrans %}
+       </div>
+       <div class="head mdt">
+       {% blocktrans %}Why use No-craSh?{% endblocktrans %}
+       </div>
+       <div class="text">
+       {% blocktrans %}Time is important and it must be planned. If you cant communicate enough at your school about events you can use No-craSh.{% endblocktrans %}
+       </div>
+       <div class="head mdt">
+       {% blocktrans %}How can I sign-up?{% endblocktrans %}
+       </div>
+       <div class="text">
+       {% blocktrans %}You can contact admin from register menu. {% endblocktrans %}</div>
+       <div class="head mdt">
+       {% blocktrans %}Can we create our menu?{% endblocktrans %}
+       </div>
+       <div class="text">
+       {% blocktrans %}Yes! You can create menus for what you need.{% endblocktrans %}
+       </div>
+
+</div>
+</div>
+<div class="push gre"></div>
+{% endblock %}

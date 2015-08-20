@@ -1,64 +1,97 @@
 from django.shortcuts import render, get_object_or_404
 import time
+import calendar
 from .models import Event
 from django.contrib import messages
 from .forms import EventForm, UpdateEventForm, LoginForm
 from datetime import date
-import calendar
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 
-mnames = [_("January"), _("February"), _("March"), _("April"), _("May"), _("June"), _("July"), _("August"), _("September"), _("October"), _("November"), _("December")]
+mnames = [_("January"),
+          _("February"),
+          _("March"),
+          _("April"),
+          _("May"),
+          _("June"),
+          _("July"),
+          _("August"),
+          _("September"),
+          _("October"),
+          _("November"),
+          _("December")]
 cal = calendar.Calendar()
 
 
 def index(request):
     if request.user.is_anonymous():
-        return render(request, "index2.html")
+        return render(request, "indexout.html")
     else:
-        lst = [[]]
-        lstlab = [[]]
-        lstexams = [[]]
-        lstceremony = [[]]
         week = 0
+        lst = [[]]
         nyear, nmonth = time.localtime()[:2]
         month_days = cal.itermonthdays(nyear, nmonth)
         for day in month_days:
             events = Event.objects.filter(
                 date__year=nyear, date__month=nmonth, date__day=day)
-            eventslab = events.filter(event_type=1)
-            eventsexams = events.filter(event_type=0)
-            eventsceremony = events.filter(event_type=2)
             lst[week].append((day, events))
-            lstlab[week].append((day, eventslab))
-            lstexams[week].append((day, eventsexams))
-            lstceremony[week].append((day, eventsceremony))
             if len(lst[week]) == 7:
                 lst.append([])
-                lstlab.append([])
-                lstexams.append([])
-                lstceremony.append([])
                 week += 1
-
-        return render(request, "index.html", dict(
+        return render(request, "indexin.html", dict(
             weeks=lst,
-            weekslab=lstlab,
-            weeksexams=lstexams,
-            weeksceremony=lstceremony,
+            paramp="all",
             monthnumb=nmonth,
             nmonth=mnames[nmonth-1],
             nyear=int(nyear)))
 
 
-def month(request, month, year, change):
-    lst = [[]]
+def detail_event(request, param):
     lstlab = [[]]
     lstexams = [[]]
     lstceremony = [[]]
     week = 0
+    nyear, nmonth = time.localtime()[:2]
+    month_days = cal.itermonthdays(nyear, nmonth)
+    for day in month_days:
+        events = Event.objects.filter(
+            date__year=nyear, date__month=nmonth, date__day=day)
+        eventslab = events.filter(event_type=1)
+        eventsexams = events.filter(event_type=0)
+        eventsceremony = events.filter(event_type=2)
+        lstlab[week].append((day, eventslab))
+        lstexams[week].append((day, eventsexams))
+        lstceremony[week].append((day, eventsceremony))
+        if len(lstlab[week]) == 7:
+            lstlab.append([])
+            lstexams.append([])
+            lstceremony.append([])
+            week += 1
+
+    if param == "exams":
+        ctx = dict(weeks=lstexams, title="Exams", paramp="exams", cs="bgexam")
+    elif param == "lab":
+        ctx = dict(weeks=lstlab, title="Lab Plan", paramp="lab", cs="bglab")
+    elif param == "ceremony":
+        ctx = dict(
+            weeks=lstceremony,
+            title="Ceremony",
+            paramp="ceremony", cs="bgceremony")
+    ctx["monthnumb"] = nmonth
+    ctx["nmonth"] = mnames[nmonth-1]
+    ctx["nyear"] = int(nyear)
+    return render(request, "detail_event.html", ctx)
+
+
+def month(request, month, year, change, param):
+    week = 0
+    lst = [[]]
+    lstlab = [[]]
+    lstexams = [[]]
+    lstceremony = [[]]
     monthnumb = int(month)
 
     if change == "prev":
@@ -91,15 +124,21 @@ def month(request, month, year, change):
             lstexams.append([])
             lstceremony.append([])
             week += 1
-
-    return render(request, "month.html", dict(
-        weeks=lst,
-        weekslab=lstlab,
-        weeksexams=lstexams,
-        weeksceremony=lstceremony,
-        monthnumb=monthnumb,
-        nmonth=mnames[monthnumb-1],
-        nyear=int(year)))
+    if param == "all":
+        ctx = dict(weeks=lst, title="All Works", param="all", cs="general")
+    if param == "exams":
+        ctx = dict(weeks=lstexams, title="Exams", param="exams", cs="bgexam")
+    elif param == "lab":
+        ctx = dict(weeks=lstlab, title="Lab Plan", param="lab", cs="bglab")
+    elif param == "ceremony":
+        ctx = dict(
+            weeks=lstceremony,
+            title="Ceremony",
+            param="ceremony", cs="bgceremony")
+    ctx["monthnumb"] = monthnumb
+    ctx["nmonth"] = mnames[monthnumb-1]
+    ctx["nyear"] = int(year)
+    return render(request, "month.html", ctx)
 
 
 def create_event(request, day, month, year):

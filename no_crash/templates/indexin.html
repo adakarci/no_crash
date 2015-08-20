@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div id="container">
+
+<div id="secp">
+	<a style="color:#008080;" href="{% url 'month'  monthnumb nyear "prev" paramp %}">&lt;&lt; {% trans 'Prev' %}</a>
+	<a style="color:#008080;" href="{% url 'month'  monthnumb nyear "next" paramp %}">{% trans 'Next' %} &gt;&gt;</a>
+</div>
+
+<div id="secday"><h3>{{ nmonth }} {{ nyear }} - <font color="#3c763d">{% trans 'All Works' %}</font></h3> </div>
+
+<div id="secp">
+		<tk>{% trans 'Monday' %}</tk>
+        <tk>{% trans 'Tuesday' %}</tk>
+        <tk>{% trans 'Wend' %}</tk>
+        <tk>{% trans 'Thursday' %}</tk>
+        <tk>{% trans 'Friday' %}</tk>
+        <tk>{% trans 'Saturday' %}</tk>
+        <tk>{% trans 'Sunday' %}</tk>
+</div>
+
+
+
+{% for week in weeks %}
+    <div id="week">
+    {% for day, events in week %}
+    <div id="segment" class="general">
+        {% if day == 0 %}
+            <font color="red"></font>
+        {% else %}
+            <a href="{% url 'create_event'  day nmonth nyear %}">{{ day }}</a><p>
+        {% if events %}
+            {% for event in events|slice:"0:2" %}
+                {% if event.user == request.user %}
+                <a style="color:#008080;" href="{% url 'update_event' event.id %}">
+                {{event.get_time_display}}: {{event.title|slice:":40"}}
+                </a>
+                {% else %}
+                {{event.get_time_display}}: {{event.title}}
+                {% endif %}
+                <p>
+            {% endfor %}
+            <p> <a style="color:grey;" href="{% url 'detail_day'  day nmonth nyear %}">{% trans 'detail' %}</a>{% endif %}
+        {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+{% endfor %}
+
+
+</div>
+{% endblock %}
