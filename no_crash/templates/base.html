@@ -16,16 +16,16 @@
     {% if user.is_authenticated %}
 	<header id="back">
 	<div class="openmenu">{% trans 'Menu' %}</div>
-	<ul>
-	<li><img src="{{STATIC_URL}}img/kum.png" /></li>
-    <li><a href="{% url 'index' %}">{% trans 'NocraSh' %}</a></li>
-    <li><a href="{% url 'index'  %}">{% trans 'All Works' %}</a></li>
-    <li><a href="{% url 'detail_events' 'exams' %}">{% trans 'Exams' %}</a></li>
-    <li><a href="{% url 'detail_events' 'ceremony' %}">{% trans 'Festival' %}</a></li>
-    <li><a href="{% url 'detail_events' 'lab' %}">{% trans 'Lab Plan' %}</a></li>
-    <li><a href="{% url 'my_event' %}">{{ request.user }}({% trans 'My Events' %})</a></li>
-    <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
-    </ul>
+	   <ul>
+    	<li><img src="{{STATIC_URL}}img/kum.png" /></li>
+        <li><a href="{% url 'index' %}">{% trans 'NocraSh' %}</a></li>
+        <li><a href="{% url 'index'  %}">{% trans 'All Works' %}</a></li>
+        <li><a href="{% url 'detail_events' 'exams' %}">{% trans 'Exams' %}</a></li>
+        <li><a href="{% url 'detail_events' 'ceremony' %}">{% trans 'Festival' %}</a></li>
+        <li><a href="{% url 'detail_events' 'lab' %}">{% trans 'Lab Plan' %}</a></li>
+        <li><a href="{% url 'my_event' %}">{{ request.user }}({% trans 'My Events' %})</a></li>
+        <li><a href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+        </ul>
     </header>
     {% else %}
     <header>
