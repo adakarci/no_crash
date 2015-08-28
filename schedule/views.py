@@ -3,7 +3,7 @@ import time
 import calendar
 from .models import Event
 from django.contrib import messages
-from .forms import EventForm, UpdateEventForm, LoginForm
+from .forms import EventForm, UpdateEventForm
 from datetime import date
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
